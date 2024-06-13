@@ -1,57 +1,57 @@
 const TuyaAccessory = require('./lib/TuyaAccessory');
 const TuyaDiscovery = require('./lib/TuyaDiscovery');
 
-const OccupancySensorAccessory = require('./lib/OccupancySensorAccessory');
-const OutletAccessory = require('./lib/OutletAccessory');
-const SimpleLightAccessory = require('./lib/SimpleLightAccessory');
-const MultiOutletAccessory = require('./lib/MultiOutletAccessory');
-const CustomMultiOutletAccessory = require('./lib/CustomMultiOutletAccessory');
-const RGBTWLightAccessory = require('./lib/RGBTWLightAccessory');
+// const OccupancySensorAccessory = require('./lib/OccupancySensorAccessory');
+// const OutletAccessory = require('./lib/OutletAccessory');
+// const SimpleLightAccessory = require('./lib/SimpleLightAccessory');
+// const MultiOutletAccessory = require('./lib/MultiOutletAccessory');
+// const CustomMultiOutletAccessory = require('./lib/CustomMultiOutletAccessory');
+// const RGBTWLightAccessory = require('./lib/RGBTWLightAccessory');
 const RGBWLightAccessory = require('./lib/RGBWLightAccessory');
-const RGBTWOutletAccessory = require('./lib/RGBTWOutletAccessory');
-const TWLightAccessory = require('./lib/TWLightAccessory');
-const AirConditionerAccessory = require('./lib/AirConditionerAccessory');
-const AirPurifierAccessory = require('./lib/AirPurifierAccessory');
-const DehumidifierAccessory = require('./lib/DehumidifierAccessory');
-const ConvectorAccessory = require('./lib/ConvectorAccessory');
+// const RGBTWOutletAccessory = require('./lib/RGBTWOutletAccessory');
+// const TWLightAccessory = require('./lib/TWLightAccessory');
+// const AirConditionerAccessory = require('./lib/AirConditionerAccessory');
+// const AirPurifierAccessory = require('./lib/AirPurifierAccessory');
+// const DehumidifierAccessory = require('./lib/DehumidifierAccessory');
+// const ConvectorAccessory = require('./lib/ConvectorAccessory');
 const GarageDoorAccessory = require('./lib/GarageDoorAccessory');
-const SimpleDimmerAccessory = require('./lib/SimpleDimmerAccessory');
-const SimpleDimmer2Accessory = require('./lib/SimpleDimmer2Accessory');
-const SimpleBlindsAccessory = require('./lib/SimpleBlindsAccessory');
-const SimpleHeaterAccessory = require('./lib/SimpleHeaterAccessory');
-const SimpleFanAccessory = require('./lib/SimpleFanAccessory');
-const SimpleFanLightAccessory = require('./lib/SimpleFanLightAccessory');
+// const SimpleDimmerAccessory = require('./lib/SimpleDimmerAccessory');
+// const SimpleDimmer2Accessory = require('./lib/SimpleDimmer2Accessory');
+// const SimpleBlindsAccessory = require('./lib/SimpleBlindsAccessory');
+// const SimpleHeaterAccessory = require('./lib/SimpleHeaterAccessory');
+// const SimpleFanAccessory = require('./lib/SimpleFanAccessory');
+// const SimpleFanLightAccessory = require('./lib/SimpleFanLightAccessory');
 const SwitchAccessory = require('./lib/SwitchAccessory');
-const ValveAccessory = require('./lib/ValveAccessory');
-const OilDiffuserAccessory = require('./lib/OilDiffuserAccessory');
+// const ValveAccessory = require('./lib/ValveAccessory');
+// const OilDiffuserAccessory = require('./lib/OilDiffuserAccessory');
 
 const PLUGIN_NAME = 'homebridge-tuya-local-j';
 const PLATFORM_NAME = 'TuyaLan-J';
 
 const CLASS_DEF = {
-    occupancysensor: OccupancySensorAccessory,
-    outlet: OutletAccessory,
-    simplelight: SimpleLightAccessory,
-    rgbtwlight: RGBTWLightAccessory,
+    // occupancysensor: OccupancySensorAccessory,
+    // outlet: OutletAccessory,
+    // simplelight: SimpleLightAccessory,
+    // rgbtwlight: RGBTWLightAccessory,
     rgbwlight: RGBWLightAccessory,
-    rgbtwoutlet: RGBTWOutletAccessory,
-    twlight: TWLightAccessory,
-    multioutlet: MultiOutletAccessory,
-    custommultioutlet: CustomMultiOutletAccessory,
-    airconditioner: AirConditionerAccessory,
-    airpurifier: AirPurifierAccessory,
-    dehumidifier: DehumidifierAccessory,
-    convector: ConvectorAccessory,
+    // rgbtwoutlet: RGBTWOutletAccessory,
+    // twlight: TWLightAccessory,
+    // multioutlet: MultiOutletAccessory,
+    // custommultioutlet: CustomMultiOutletAccessory,
+    // airconditioner: AirConditionerAccessory,
+    // airpurifier: AirPurifierAccessory,
+    // dehumidifier: DehumidifierAccessory,
+    // convector: ConvectorAccessory,
     garagedoor: GarageDoorAccessory,
-    simpledimmer: SimpleDimmerAccessory,
-    simpledimmer2: SimpleDimmer2Accessory,
-    simpleblinds: SimpleBlindsAccessory,
-    simpleheater: SimpleHeaterAccessory,
-    switch: SwitchAccessory,
-    fan: SimpleFanAccessory,
-    fanlight: SimpleFanLightAccessory,
-    watervalve: ValveAccessory,
-    oildiffuser: OilDiffuserAccessory
+    // simpledimmer: SimpleDimmerAccessory,
+    // simpledimmer2: SimpleDimmer2Accessory,
+    // simpleblinds: SimpleBlindsAccessory,
+    // simpleheater: SimpleHeaterAccessory,
+    switch: SwitchAccessory //,
+    // fan: SimpleFanAccessory,
+    // fanlight: SimpleFanLightAccessory,
+    // watervalve: ValveAccessory,
+    // oildiffuser: OilDiffuserAccessory
 };
 
 let Characteristic, PlatformAccessory, Service, Categories, AdaptiveLightingController, UUID;
