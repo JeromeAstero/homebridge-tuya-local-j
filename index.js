@@ -7,6 +7,7 @@ const SimpleLightAccessory = require('./lib/SimpleLightAccessory');
 const MultiOutletAccessory = require('./lib/MultiOutletAccessory');
 const CustomMultiOutletAccessory = require('./lib/CustomMultiOutletAccessory');
 const RGBTWLightAccessory = require('./lib/RGBTWLightAccessory');
+const RGBWLightAccessory = require('./lib/RGBWLightAccessory');
 const RGBTWOutletAccessory = require('./lib/RGBTWOutletAccessory');
 const TWLightAccessory = require('./lib/TWLightAccessory');
 const AirConditionerAccessory = require('./lib/AirConditionerAccessory');
@@ -24,14 +25,15 @@ const SwitchAccessory = require('./lib/SwitchAccessory');
 const ValveAccessory = require('./lib/ValveAccessory');
 const OilDiffuserAccessory = require('./lib/OilDiffuserAccessory');
 
-const PLUGIN_NAME = 'homebridge-tuya-local';
-const PLATFORM_NAME = 'TuyaLan';
+const PLUGIN_NAME = 'homebridge-tuya-local-j';
+const PLATFORM_NAME = 'TuyaLan-J';
 
 const CLASS_DEF = {
     occupancysensor: OccupancySensorAccessory,
     outlet: OutletAccessory,
     simplelight: SimpleLightAccessory,
     rgbtwlight: RGBTWLightAccessory,
+    rgbwlight: RGBWLightAccessory,
     rgbtwoutlet: RGBTWOutletAccessory,
     twlight: TWLightAccessory,
     multioutlet: MultiOutletAccessory,
