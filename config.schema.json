@@ -48,6 +48,14 @@
                       "Switch"
                     ]
                   }
+                  ,
+                  {
+                    "title": "Doorbell",
+                    "enum": [
+                      "Doorbell"
+                    ]
+                  }
+
                 ]
               },
               "name": {
@@ -433,6 +441,27 @@
                 "placeholder": "0",
                 "condition": {
                   "functionBody": "return model.devices && model.devices[arrayIndices] && ['SimpleBlinds'].includes(model.devices[arrayIndices].type);"
+                }
+              },
+              "dpDoorbellActive": {
+                "type": "integer",
+                "placeholder": "136",
+                "condition": {
+                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['Doorbell'].includes(model.devices[arrayIndices].type);"
+                }
+              },
+              "dpDoorUnlock": {
+                "type": "integer",
+                "placeholder": "148",
+                "condition": {
+                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['Doorbell'].includes(model.devices[arrayIndices].type);"
+                }
+              },
+              "dpChannel": {
+                "type": "integer",
+                "placeholder": "231",
+                "condition": {
+                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['Doorbell'].includes(model.devices[arrayIndices].type);"
                 }
               }
             }

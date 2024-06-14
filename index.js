@@ -22,6 +22,7 @@ const GarageDoorAccessory = require('./lib/GarageDoorAccessory');
 // const SimpleFanAccessory = require('./lib/SimpleFanAccessory');
 // const SimpleFanLightAccessory = require('./lib/SimpleFanLightAccessory');
 const SwitchAccessory = require('./lib/SwitchAccessory');
+const DoorbellAccessory = require('./lib/DoorbellAccessory');
 // const ValveAccessory = require('./lib/ValveAccessory');
 // const OilDiffuserAccessory = require('./lib/OilDiffuserAccessory');
 
@@ -47,7 +48,8 @@ const CLASS_DEF = {
     // simpledimmer2: SimpleDimmer2Accessory,
     // simpleblinds: SimpleBlindsAccessory,
     // simpleheater: SimpleHeaterAccessory,
-    switch: SwitchAccessory //,
+    switch: SwitchAccessory,
+    doorbell: DoorbellAccessory //,
     // fan: SimpleFanAccessory,
     // fanlight: SimpleFanLightAccessory,
     // watervalve: ValveAccessory,
@@ -93,7 +95,6 @@ class TuyaLan {
                 device.id = ('' + device.id).trim();
                 device.key = ('' + device.key).trim();
                 device.type = ('' + device.type).trim();
-
                 device.ip = ('' + (device.ip || '')).trim();
             } catch(ex) {}
 
