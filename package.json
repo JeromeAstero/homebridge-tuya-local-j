@@ -1,6 +1,6 @@
 {
   "name": "homebridge-tuya-local-j",
-  "version": "3.1.00",
+  "version": "3.0.32",
   "description": "🏠 Control Tuya Accessories Locally with Homebridge",
   "main": "index.js",
   "scripts": {
