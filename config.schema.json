@@ -24,30 +24,6 @@
                       "null"
                     ]
                   },
-                  { 
-                    "title": "Human Presence Sensor",
-                    "enum": [
-                      "OccupancySensor"
-                      ]
-                  },
-                  { 
-                    "title": "Smart Plug / Barely Smart Power Strip",
-                    "enum": [
-                      "Outlet"
-                      ]
-                  },
-                  {
-                    "title": "Simple Light Bulb / Socket",
-                    "enum": [
-                      "SimpleLight"
-                    ]
-                  },
-                  {
-                    "title": "Tunable White Light Bulb",
-                    "enum": [
-                      "TWLight"
-                    ]
-                  },
                   {
                     "title": "Tunable White and Color Light Bulb",
                     "enum": [
@@ -61,75 +37,15 @@
                     ]
                   },
                   {
-                    "title": "Smart Power Strip",
-                    "enum": [
-                      "MultiOutlet"
-                    ]
-                  },
-                  {
-                    "title": "Non-sequential Power Strip",
-                    "enum": [
-                      "CustomMultiOutlet"
-                    ]
-                  },
-                  {
-                    "title": "Air Conditioner",
-                    "enum": [
-                      "AirConditioner"
-                    ]
-                  },
-                  {
-                    "title": "Heat Convector",
-                    "enum": [
-                      "Convector"
-                    ]
-                  },
-                  {
-                    "title": "Simple Dimmer",
-                    "enum": [
-                      "SimpleDimmer"
-                    ]
-                  },
-                  {
-                    "title": "Simple Heater",
-                    "enum": [
-                      "SimpleHeater"
-                    ]
-                  },
-                  {
                     "title": "Garage Door",
                     "enum": [
                       "GarageDoor"
                     ]
                   },
                   {
-                    "title": "Simple Blinds",
+                    "title": "Switch",
                     "enum": [
-                      "SimpleBlinds"
-                    ]
-                  },
-                  {
-                    "title": "Simple Blinds2",
-                    "enum": [
-                      "Simple Blinds2"
-                    ]
-                  },
-                  {
-                    "title": "Smart Plug w/ White and Color Lights",
-                    "enum": [
-                      "RGBTWOutlet"
-                    ]
-                  },
-                  {
-                    "title": "Fan",
-                    "enum": [
-                      "Fan"
-                    ]
-                  },
-                  {
-                    "title": "Fan with Light",
-                    "enum": [
-                      "FanLight"
+                      "Switch"
                     ]
                   }
                 ]
