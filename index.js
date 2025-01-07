@@ -1,53 +1,13 @@
 const TuyaAccessory = require('./lib/TuyaAccessory');
 const TuyaDiscovery = require('./lib/TuyaDiscovery');
 
-const OutletAccessory = require('./lib/OutletAccessory');
-const SimpleLightAccessory = require('./lib/SimpleLightAccessory');
-const MultiOutletAccessory = require('./lib/MultiOutletAccessory');
-const CustomMultiOutletAccessory = require('./lib/CustomMultiOutletAccessory');
-const RGBTWLightAccessory = require('./lib/RGBTWLightAccessory');
-const RGBTWOutletAccessory = require('./lib/RGBTWOutletAccessory');
-const TWLightAccessory = require('./lib/TWLightAccessory');
-const AirConditionerAccessory = require('./lib/AirConditionerAccessory');
-const AirPurifierAccessory = require('./lib/AirPurifierAccessory');
-const DehumidifierAccessory = require('./lib/DehumidifierAccessory');
-const ConvectorAccessory = require('./lib/ConvectorAccessory');
-const GarageDoorAccessory = require('./lib/GarageDoorAccessory');
-const SimpleDimmerAccessory = require('./lib/SimpleDimmerAccessory');
-const SimpleDimmer2Accessory = require('./lib/SimpleDimmer2Accessory');
-const SimpleBlindsAccessory = require('./lib/SimpleBlindsAccessory');
-const SimpleHeaterAccessory = require('./lib/SimpleHeaterAccessory');
-const SimpleFanAccessory = require('./lib/SimpleFanAccessory');
-const SimpleFanLightAccessory = require('./lib/SimpleFanLightAccessory');
-const SwitchAccessory = require('./lib/SwitchAccessory');
-const ValveAccessory = require('./lib/ValveAccessory');
-const OilDiffuserAccessory = require('./lib/OilDiffuserAccessory');
+const RGBWLightAccessory = require('./lib/RGBWLightAccessory');
 
-const PLUGIN_NAME = 'homebridge-tuya';
-const PLATFORM_NAME = 'TuyaLan';
+const PLUGIN_NAME = 'homebridge-tuya-rgbw';
+const PLATFORM_NAME = 'TuyaLan-rgbw';
 
 const CLASS_DEF = {
-    outlet: OutletAccessory,
-    simplelight: SimpleLightAccessory,
-    rgbtwlight: RGBTWLightAccessory,
-    rgbtwoutlet: RGBTWOutletAccessory,
-    twlight: TWLightAccessory,
-    multioutlet: MultiOutletAccessory,
-    custommultioutlet: CustomMultiOutletAccessory,
-    airconditioner: AirConditionerAccessory,
-    airpurifier: AirPurifierAccessory,
-    dehumidifier: DehumidifierAccessory,
-    convector: ConvectorAccessory,
-    garagedoor: GarageDoorAccessory,
-    simpledimmer: SimpleDimmerAccessory,
-    simpledimmer2: SimpleDimmer2Accessory,
-    simpleblinds: SimpleBlindsAccessory,
-    simpleheater: SimpleHeaterAccessory,
-    switch: SwitchAccessory,
-    fan: SimpleFanAccessory,
-    fanlight: SimpleFanLightAccessory,
-    watervalve: ValveAccessory,
-    oildiffuser: OilDiffuserAccessory
+    rgbwlight: RGBWLightAccessory
 };
 
 let Characteristic, PlatformAccessory, Service, Categories, AdaptiveLightingController, UUID;
