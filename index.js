@@ -10,12 +10,12 @@ const CLASS_DEF = {
     rgbwlight: RGBWLightAccessory
 };
 
-let Characteristic, PlatformAccessory, Service, Categories, AdaptiveLightingController, UUID;
+let Characteristic, PlatformAccessory, Service, Categories, UUID;
 
 module.exports = function(homebridge) {
     ({
         platformAccessory: PlatformAccessory,
-        hap: {Characteristic, Service, AdaptiveLightingController, Accessory: {Categories}, uuid: UUID}
+        hap: {Characteristic, Service, Accessory: {Categories}, uuid: UUID}
     } = homebridge);
 
     homebridge.registerPlatform(PLUGIN_NAME, PLATFORM_NAME, TuyaLan, true);
