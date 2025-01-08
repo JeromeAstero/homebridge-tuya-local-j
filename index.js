@@ -42,7 +42,6 @@ class TuyaLan {
     discoverDevices() {
         const devices = {};
         const connectedDevices = [];
-        const fakeDevices = [];
         this.config.devices.forEach(device => {
             try {
                 device.id = ('' + device.id).trim();
@@ -67,7 +66,6 @@ class TuyaLan {
         TuyaDiscovery.start({ids: deviceIds, log: this.log})
             .on('discover', config => {
                 if (!config || !config.id) return;
-                if (!devices[config.id]) return this.log.warn('Discovered a device that has not been configured yet (%s@%s).', config.id, config.ip);
 
                 connectedDevices.push(config.id);
 
@@ -81,16 +79,6 @@ class TuyaLan {
                 });
                 this.addAccessory(device);
             });
-
-        fakeDevices.forEach(config => {
-            this.log.info('Adding fake device: %s', config.name);
-            this.addAccessory(new TuyaAccessory({
-                ...config,
-                log: this.log,
-                UUID: UUID.generate(PLUGIN_NAME + ':fake:' + config.id),
-                connect: false
-            }));
-        });
 
         setTimeout(() => {
             deviceIds.forEach(deviceId => {
