@@ -47,14 +47,12 @@ class TuyaLan {
                 device.id = ('' + device.id).trim();
                 device.key = ('' + device.key).trim();
                 device.type = ('' + device.type).trim();
-
                 device.ip = ('' + (device.ip || '')).trim();
             } catch(ex) {}
 
             if (!device.type) return this.log.error('%s (%s) doesn\'t have a type defined.', device.name || 'Unnamed device', device.id);
             if (!CLASS_DEF[device.type.toLowerCase()]) return this.log.error('%s (%s) doesn\'t have a valid type defined.', device.name || 'Unnamed device', device.id);
 
-            if (device.fake) fakeDevices.push({name: device.id.slice(8), ...device});
             else devices[device.id] = {name: device.id.slice(8), ...device};
         });
 
@@ -65,8 +63,8 @@ class TuyaLan {
 
         TuyaDiscovery.start({ids: deviceIds, log: this.log})
             .on('discover', config => {
-                this.log.info(config);
                 if (!config || !config.id) return;
+                if (!devices[config.id]) return this.log.warn('Discovered a device that has not been configured yet (%s@%s).', config.id, config.ip);
 
                 connectedDevices.push(config.id);
 
