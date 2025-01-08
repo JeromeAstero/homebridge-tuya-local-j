@@ -65,6 +65,7 @@ class TuyaLan {
 
         TuyaDiscovery.start({ids: deviceIds, log: this.log})
             .on('discover', config => {
+                this.log.info(config);
                 if (!config || !config.id) return;
 
                 connectedDevices.push(config.id);
